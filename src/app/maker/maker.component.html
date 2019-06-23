@@ -1,0 +1,144 @@
+<div id="app">
+  <form id="form-signature" >
+      
+      <input type="text"
+      name="brand"
+      placeholder="Logo da empresa"
+      (change)="handleChange()"
+      [(ngModel)]="state.brand"
+      /> 
+
+      <input type="text"
+      name="menberName"
+      placeholder="Nome"
+      (change)="handleChange()"
+      [(ngModel)]="state.menberName"
+      />
+
+      <input type="text"
+      name="position"
+      placeholder="Cargo"
+      (change)="handleChange()"
+      [(ngModel)]="state.position"
+      />
+
+      <input type="text"
+      name="company"
+      placeholder="Empresa"
+      (change)="handleChange()"
+      [(ngModel)]="state.company"
+      /> 
+
+      <input type="text"
+      name="email"
+      placeholder="E-mail"
+      (change)="handleChange()"
+      [(ngModel)]="state.email"
+      />
+
+      <input type="text"
+      name="phone"
+      placeholder="Telefone"
+      (change)="handleChange()"
+      [(ngModel)]="state.phone"
+      />
+
+      <input type="text"
+      name="address"
+      placeholder="Endereço"
+      (change)="handleChange()"
+      [(ngModel)]="state.address"
+      />
+
+      <input type="text"
+      name="website"
+      placeholder="Site"
+      (change)="handleChange()"
+      [(ngModel)]="state.website"
+      />
+
+      <input type="text"
+      name="instagram"
+      placeholder="Instagram"
+      (change)="handleChange()"
+      [(ngModel)]="state.instagram"
+      />
+
+      <input type="text"
+      name="facebook"
+      placeholder="Facebook"
+      (change)="handleChange()"
+      [(ngModel)]="state.facebook"
+      />
+
+      <input type="text"
+      name="linkedin"
+      placeholder="Linkedin"
+      (change)="handleChange()"
+      [(ngModel)]="state.linkedin"
+      />
+
+      <input type="text"
+      name="youtube"
+      placeholder="Youtube"
+      (change)="handleChange()"
+      [(ngModel)]="state.youtube"
+      />
+
+  </form>
+
+
+    <section>
+      <div id="demo">
+          <div id="signatureBox">
+          <div  style="margin-bottom: -24px;">
+              <a  href="{{websiteLink}}" target="_blank">
+              <img  src="{{state.brand}}" width="180" height="180">
+          </a>
+          </div>
+          <div  style="display: inline-block;">
+              <strong  style="line-height:20px;font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); font-weight: bold;">
+                  {{state.menberName}}</strong>
+                  <strong style="line-height:20px;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); display: block; padding-bottom: 8px; font-weight: bold;">
+                      {{state.position}}</strong>
+                  <strong style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; font-weight: bold;">
+                      NSG Engenharia – Soluções Contra Incêndios e Serviços</strong>
+                  <a href="mailto:{{state.email}}" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
+                      {{state.email}}</a>
+                  <a href="{{websiteLink}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
+                      {{state.website}}</a> 
+                  <a style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94);">
+                      {{state.phone}}</a> 
+                  <a  href="http://maps.google.com/?q={{state.address}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">Rua Juiz Moacir Marques Morado, 182. Centro. São João de Meriti. RJ. CEP 25520-391</a> 
+                  <div >
+                    <span *ngIf="state.facebook" >
+                        <a  href="{{state.facebook}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
+                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/facebook.png"></a>
+                    </span>
+                    <span *ngIf="state.instagram" >
+                        <a  href="{{state.instagram}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
+                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/instagram.png"></a>
+                    </span>
+                    <span *ngIf="state.linkedin" >
+                        <a  href="{{state.linkedin}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
+                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/linkedin.png"></a>
+                    </span>
+                    <span *ngIf="state.youtube" >
+                      <a  href="{{state.youtube}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
+                        <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/youtube.png"></a>
+                    </span>
+                      
+                      
+                      
+                      
+                  </div>
+              </div>
+       </div>
+       <div class="tooltip" style="opacity: 1;" *ngIf="txtToolTip"><span class="tooltip__content"
+                      >{{txtToolTip}}</span></div>
+      <button type="button" (click)="copy()">Copiar assinatura</button>
+    </div>
+
+    </section>
+  </div>
+  
