@@ -67,7 +67,6 @@ export class MakerComponent implements OnInit {
     document.execCommand('copy');
 
     this.txtToolTip = 'Assinatura copiada com sucesso.';
-    // this.clipboardService.copyFromContent(text);
     setTimeout(() => {
       this.txtToolTip = '';
     }, 4500);
