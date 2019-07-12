@@ -91,41 +91,42 @@
     <section>
       <div id="demo">
           <div id="signatureBox">
-          <div  style="margin-bottom: -24px;">
-              <a  href="{{websiteLink}}" target="_blank">
-              <img  src="{{state.brand}}" width="180" height="180">
-          </a>
-          </div>
+            <div>
+                <a  href="{{websiteLink}}" target="_blank">
+                <img  src="{{state.brand}}" style="max-width: 180px; max-height: 180px;">
+            </a>
+            </div>
           <div  style="display: inline-block;">
               <strong  style="line-height:20px;font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); font-weight: bold;">
                   {{state.menberName}}</strong>
                   <strong style="line-height:20px;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); display: block; padding-bottom: 8px; font-weight: bold;">
                       {{state.position}}</strong>
                   <strong style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; font-weight: bold;">
-                      NSG Engenharia – Soluções Contra Incêndios e Serviços</strong>
+                     {{state.company}}</strong>
                   <a href="mailto:{{state.email}}" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
                       {{state.email}}</a>
                   <a href="{{websiteLink}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
                       {{state.website}}</a> 
                   <a style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94);">
                       {{state.phone}}</a> 
-                  <a  href="http://maps.google.com/?q={{state.address}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">Rua Juiz Moacir Marques Morado, 182. Centro. São João de Meriti. RJ. CEP 25520-391</a> 
+                  <a  href="http://maps.google.com/?q={{state.address}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
+                    {{state.address}}</a> 
                   <div >
                     <span *ngIf="state.facebook" >
                         <a  href="{{state.facebook}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/facebook.png"></a>
+                            <img  src="../../assets/facebook.png"></a>
                     </span>
                     <span *ngIf="state.instagram" >
                         <a  href="{{state.instagram}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/instagram.png"></a>
+                            <img  src="../../assets/instagram.png"></a>
                     </span>
                     <span *ngIf="state.linkedin" >
                         <a  href="{{state.linkedin}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/linkedin.png"></a>
+                            <img  src="../../assets/linkedin.png"></a>
                     </span>
                     <span *ngIf="state.youtube" >
                       <a  href="{{state.youtube}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                        <img  src="http://www.nsgengenhariaeservicos.com.br/assinatura/assets/youtube.png"></a>
+                        <img  src="../../assets/youtube.png"></a>
                     </span>
                       
                       

@@ -32,6 +32,7 @@ export class MakerComponent implements OnInit {
       company: new FormControl(),
       menber_name: new FormControl()
     });
+    this.handleChange();
   }
 
   handleChange() {
