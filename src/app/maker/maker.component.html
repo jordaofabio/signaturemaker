@@ -1,12 +1,11 @@
 <div id="app">
   <form id="form-signature" >
-      
-      <input type="text"
+      <!-- <input type="text"
       name="brand"
       placeholder="Logo da empresa"
       (change)="handleChange()"
       [(ngModel)]="state.brand"
-      /> 
+      />  -->
 
       <input type="text"
       name="menberName"
@@ -21,14 +20,14 @@
       (change)="handleChange()"
       [(ngModel)]="state.position"
       />
-
+<!-- 
       <input type="text"
       name="company"
       placeholder="Empresa"
       (change)="handleChange()"
       [(ngModel)]="state.company"
       /> 
-
+ -->
       <input type="text"
       name="email"
       placeholder="E-mail"
@@ -43,14 +42,14 @@
       [(ngModel)]="state.phone"
       />
 
-      <input type="text"
+     <!-- <input type="text"
       name="address"
       placeholder="Endereço"
       (change)="handleChange()"
       [(ngModel)]="state.address"
       />
 
-      <input type="text"
+       <input type="text"
       name="website"
       placeholder="Site"
       (change)="handleChange()"
@@ -76,14 +75,14 @@
       placeholder="Linkedin"
       (change)="handleChange()"
       [(ngModel)]="state.linkedin"
-      />
+      /> -->
 
-      <input type="text"
+      <!-- <input type="text"
       name="youtube"
       placeholder="Youtube"
       (change)="handleChange()"
       [(ngModel)]="state.youtube"
-      />
+      /> -->
 
   </form>
 
@@ -91,50 +90,41 @@
     <section>
       <div id="demo">
           <div id="signatureBox">
-            <div>
-                <a  href="{{websiteLink}}" target="_blank">
-                <img  src="{{state.brand}}" style="max-width: 180px; max-height: 180px;">
-            </a>
-            </div>
-          <div  style="display: inline-block;">
-              <strong  style="line-height:20px;font-size: 15px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); font-weight: bold;">
-                  {{state.menberName}}</strong>
-                  <strong style="line-height:20px;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: rgb(17, 84, 105); display: block; padding-bottom: 8px; font-weight: bold;">
-                      {{state.position}}</strong>
-                  <strong style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; font-weight: bold;">
-                     {{state.company}}</strong>
-                  <a href="mailto:{{state.email}}" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
-                      {{state.email}}</a>
-                  <a href="{{websiteLink}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
-                      {{state.website}}</a> 
-                  <a style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94);">
-                      {{state.phone}}</a> 
-                  <a  href="http://maps.google.com/?q={{state.address}}" target="_blank" style="line-height:20px;font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(94, 94, 94); display: block; text-decoration: none;">
-                    {{state.address}}</a> 
-                  <div >
-                    <span *ngIf="state.facebook" >
-                        <a  href="{{state.facebook}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="../../assets/facebook.png"></a>
-                    </span>
-                    <span *ngIf="state.instagram" >
-                        <a  href="{{state.instagram}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="../../assets/instagram.png"></a>
-                    </span>
-                    <span *ngIf="state.linkedin" >
-                        <a  href="{{state.linkedin}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                            <img  src="../../assets/linkedin.png"></a>
-                    </span>
-                    <span *ngIf="state.youtube" >
-                      <a  href="{{state.youtube}}" target="_blank" style="padding: 14px 8px 14px 0px; display: inline-block;">
-                        <img  src="../../assets/youtube.png"></a>
-                    </span>
-                      
-                      
-                      
-                      
-                  </div>
-              </div>
-       </div>
+<!-- Abre o HTML -->
+      <table style="font-family:  Arial, Helvetica, sans-serif;">
+        <tr>
+              <th style="text-align: left; "> 
+                                
+                  <span style="font-size: 18px; font-weight: bold; color:#1E526D;"> 
+                      {{state.menberName}}
+                  </span>
+         <span style="color: #63ff01;"> | </span>
+              <span style="font-weight:bold;color:#606060; line-height: 18px; font-size:16px;">
+                  {{state.position}} </span>
+                  <br><br>
+                  <span style="font-weight:lighter;font-size:14px;color:#606060; line-height: 1px; ">
+                      {{state.phone}} <span style="color: #63ff01;">  |  </span> {{state.email}}
+                  </span>
+                  <br>
+
+              </th>
+
+          </tr>
+
+          <tr>
+          <th style="text-align: left;line-height: -10px;">
+            <img src="{{state.brand}}"> <br>
+            <a href="{{state.linkedin}}" target="_blank"> <img src="{{host}}/assets/linkedin.png"></a>
+            <a href="{{state.facebook}}" target="_blank"> <img src="{{host}}/assets/facebook.png"></a>
+            <a href="{{state.instagram}}" target="_blank"> <img src="{{host}}/assets/instagram.png"></a>
+          <br>
+          <a href="{{websiteLink}}" target="_blank" style="text-decoration:none; color:#1E526D; line-height: 18px">{{state.website}}</a>
+            
+          </th>
+        </tr>
+      </table>
+<!-- Fecha HTML -->
+          </div>
        <div class="tooltip" style="opacity: 1;" *ngIf="txtToolTip"><span class="tooltip__content"
                       >{{txtToolTip}}</span></div>
       <button type="button" (click)="copy()">Copiar assinatura</button>
